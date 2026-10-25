@@ -104,11 +104,3 @@ python -m pip install requests
 ### Tkinter is unavailable
 
 Install the Tkinter package appropriate for your operating system or Python distribution.
-
-## Contributing
-
-Suggestions, bug reports, and pull requests are welcome. Please describe the proposed change clearly.
-
-## License
-
-No license has been specified yet. Add a `LICENSE` file before distributing the project under a particular open-source license.
