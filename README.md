@@ -82,6 +82,6 @@ The API provides reference exchange rates. These rates may differ from those off
 
 ## 👨‍💻 Author
 
-**Hasan Zabir**
+**ZaBir HaSan**
 
 **Built with Python, Tkinter, and the Frankfurter API.**
