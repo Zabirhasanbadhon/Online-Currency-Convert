@@ -1,106 +1,87 @@
-# Online Currency Converter
+# 🌍 ZaBir GlobeX
 
-A simple desktop currency converter built with **Python**, **Tkinter**, and the **Frankfurter Exchange Rates API**. Enter an amount in US dollars (USD), choose a country, and retrieve an exchange rate online to calculate the converted amount.
+A modern, desktop-based **Currency Converter** built with Python and Tkinter. It features a beautiful cream-white interface and retrieves supported currencies and exchange rates online using the [Frankfurter API](https://frankfurter.dev/).
 
-## Features
+Convert between supported currencies from around the world with a clean, simple, and user-friendly interface.
 
-- Simple graphical user interface built with Tkinter.
-- Fetches exchange rates online through the Frankfurter API.
-- Converts USD into the selected currency.
-- Supports these country selections:
-  - Mexico — Mexican Peso (MXN)
-  - Bangladesh — Bangladeshi Taka (BDT)
-  - China — Chinese Yuan (CNY)
-  - Japan — Japanese Yen (JPY)
-  - France — Euro (EUR)
-  - Germany — Euro (EUR)
-  - Italy — Euro (EUR)
-  - Pakistan — Pakistani Rupee (PKR)
-  - Russia — Russian Ruble (RUB)
-  - Saudi Arabia — Saudi Riyal (SAR)
-- Displays results to two decimal places.
-- Includes basic validation and handles unavailable rates or network errors.
+## ✨ Features
 
-## Requirements
+- 🌎 **Global Currency Support:** Dynamically loads available currencies from the Frankfurter API.
+- 💱 **Live Exchange Rates:** Retrieves the latest available reference exchange rates online.
+- 🎨 **Modern UI:** Features a cream-white background, elegant typography, and a soft green color palette.
+- 🔄 **Currency Swap:** Quickly switch the source and target currencies.
+- ⚡ **Background Processing:** Fetches exchange rates in a separate thread to keep the interface responsive.
+- ✅ **Input Validation:** Handles invalid amounts and prevents negative values.
+- 📊 **Conversion Details:** Displays the converted amount, exchange rate, and rate date when available.
+- 🌐 **Internet Connectivity Handling:** Displays an error message when the API is unavailable.
+- 🖥️ **Desktop Application:** Built with Python's Tkinter GUI toolkit.
 
-- Python 3
-- Internet connection
-- `requests` package
+## 🛠️ Technologies Used
 
-Tkinter is included with many standard Python installations. On some Linux distributions, it may need to be installed separately.
+- **Python** — Core programming language.
+- **Tkinter** — Graphical user interface.
+- **Requests** — HTTP requests to retrieve currencies and exchange rates.
+- **Threading** — Background processing for network requests.
+- **Frankfurter API** — Currency information and exchange rates.
 
-## Installation
+## 📋 Requirements
 
-1. **Clone this repository:**
+Before running this project, make sure you have:
 
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-   cd YOUR-REPOSITORY
-   ```
+- Python 3.8 or later.
+- An active internet connection.
+- The `requests` Python library.
 
-   Replace `YOUR-USERNAME` and `YOUR-REPOSITORY` with your GitHub username and repository name.
-
-2. **Install the dependency:**
-
-   ```bash
-   python -m pip install requests
-   ```
-
-3. **Run the application:**
-
-   ```bash
-   python online_currency_converter.py
-   ```
-
-   Depending on your Python installation, you may need to use `python3` instead of `python`.
-
-## How to Use
+## 💡 How to Use
 
 1. Launch the application.
-2. Enter the amount in USD.
-3. Select a country from the dropdown menu.
-4. Click **Convert Currency**.
-5. Read the converted amount in the output area.
+2. Enter the amount you want to convert.
+3. Select the source currency from the **From Currency** dropdown.
+4. Select the target currency from the **To Currency** dropdown.
+5. Click **Convert Currency**.
+6. View the converted amount, exchange rate, and rate date when available.
+7. Use **Swap Currencies** to reverse the selected currencies.
 
-## API
+### Example
 
-The application uses the Frankfurter API to request a rate for a currency pair. For example:
+Suppose you want to convert 100 US Dollars (USD) into Bangladeshi Taka (BDT).
+
+- **Amount:** 1
+- **From Currency:** USD — US Dollar
+- **To Currency:** BDT — Bangladeshi Taka
+
+The application retrieves the available exchange rate and calculates the converted amount.
+
+*The actual result depends on the exchange rate returned by the API.*
+
+## 🔌 API Information
+
+This project uses the **Frankfurter API** to retrieve currency information and exchange rates.
+
+- **Official Website:** https://frankfurter.dev/
+- **Currency Catalogue:** `/v2/currencies`
+- **Exchange Rate Endpoint:** `/v2/rate/{base}/{quote}`
+
+Example endpoint:
 
 ```text
-https://api.frankfurter.dev/v2/rate/USD/MXN
+https://api.frankfurter.dev/v2/rate/USD/BDT
 ```
 
-The response contains the exchange rate used by the application. The app multiplies the entered USD amount by that rate.
+The API provides reference exchange rates. These rates may differ from those offered by banks, money exchangers, or payment services.
 
-- API website: https://frankfurter.dev/
-- API documentation: https://frankfurter.dev/
+**Note:** The available currency catalogue does not necessarily include every national currency worldwide.
 
-Rates depend on the data available from the API and are **not guaranteed to be live trading rates**. An internet connection is required for a successful conversion. If the request fails or the rate is unavailable, the application displays an error message.
+## ⚠️ Limitations
 
-## Project Structure
+- An internet connection is required to retrieve currency data and exchange rates.
+- Only currencies supported by the API can be used successfully.
+- Exchange rates are reference rates and may not match real-time commercial rates.
+- The application does not execute actual currency exchanges or financial transactions.
+- Currency availability and the dates of available rates depend on the API.
 
-```text
-.
-├── online_currency_converter.py
-└── README.md
-```
+## 👨‍💻 Author
 
-## Troubleshooting
+**Hasan Zabir**
 
-### `ModuleNotFoundError: No module named 'requests'`
-
-Install the dependency:
-
-```bash
-python -m pip install requests
-```
-
-### Exchange rate unavailable
-
-- Check that your computer is connected to the internet.
-- Try again later if the API is temporarily unavailable.
-- Check the Frankfurter API documentation for supported currencies and endpoints.
-
-### Tkinter is unavailable
-
-Install the Tkinter package appropriate for your operating system or Python distribution.
+**Built with Python, Tkinter, and the Frankfurter API.**
