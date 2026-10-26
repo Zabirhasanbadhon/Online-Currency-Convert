@@ -80,7 +80,7 @@ The API provides reference exchange rates. These rates may differ from those off
 - The application does not execute actual currency exchanges or financial transactions.
 - Currency availability and the dates of available rates depend on the API.
 
-## 👨‍💻 Author
+## 👨‍💻 Developer
 
 **ZaBir HaSan**
 
